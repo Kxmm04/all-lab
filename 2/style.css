@@ -1,0 +1,27 @@
+h1 {
+    color: red;
+    font-size: 24px;
+}
+
+#c4 {
+    font-size: 20px;
+    color: blue;
+}
+
+.info {
+    font-size: 18px;
+    color: rgb(0, 173, 46);
+}
+
+.name {
+    text-align: center;
+    color: rgb(49, 49, 255);
+}
+
+.line {
+    text-decoration-line: underline;
+}
+
+.through {
+    text-decoration: line-through;
+}

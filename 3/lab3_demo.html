@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script></script>
+    <script src="https://my_script.js"></script>
+</head>
+
+<body>
+    <h1>java script in HTML Example</h1>
+    <input type="button" value="ค้นหา" onclick="run_1();" />
+    <input type="button" value="ซ่อนข้อมูล" onclick="content.innerHTML='str_html';" />
+    <div id="content">str_html</div>
+
+
+    <script>
+        let person = {
+            name: "John", age: 30, address: {
+                provice: "khonkaen", district: [
+                    {
+                        name: "Mueang",
+                        zipcode: "40000"
+                    },
+                    {
+                        name: "Tapra",
+                        zipcode: "42000"
+                    },
+                    {
+                        name: "BangHad",
+                        zipcode: "43000"
+                    }
+                ]
+            }
+        }
+
+        function run_1() {
+            let str_html = `
+                <table border='1px'>
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>${person.name}</td>
+                        <td>${person.age}</td>
+                        <td>${person.address.district[2].name}</td>
+                    </tr>
+                </table>`;
+            document.getElementById("content").innerHTML = str_html;
+        }
+    </script>
+
+</body>
+
+</html>
+<script></script>

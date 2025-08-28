@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./javascripts.js"></script>
+    <script src="https://javascripts.js"></script> 
+    <!-- แบบ External -->
+</head>
+<body>
+    
+    <h1>My Javascript</h1>
+    <input type="button" value="ok" onclick="alert('innertag');">
+    <!-- แบบ inline -->
+
+    <script>
+
+        // Primitive เก็บได้ค่าเดียว
+        // Non-Primitive เก็บได้หลายค่า เช่น Array, Object
+
+        alert("My First Javascript"); 
+        console.log("My first console log");
+        console.log(5+3);
+         let person = {name: "John", 
+         age: 30,
+         address:{provice:"Khon Kaen", zipcode: 40000 , district:[ 
+            {name: "Mueang",
+            zipcode: 40000},
+            {name: "Tapra",
+            zipcode: 42000},
+            {name: "Ban Had",
+            zipcode: 43000}
+             ]
+         }
+        };
+        console.log(person.name); 
+        console.log(person.address.provice);
+        console.log(person.address.district[1].name)
+
+        let str1 = "Zara";
+        let str2 = "My";
+        let age = 30;
+        console.log(str2 +" "+ str1+ " age "+ age.toString()); //srt+str+number ต้องใช้ toString() แปลงเป็นสตริงก่อน
+        let name = `Business `+ str2 +` information  system`; // ใช้ backtick ` ` เพื่อสร้าง template string
+
+        
+        var x = 10; // ใช้ได้กับทุกฟังก์ชัน (แบบ 1)
+        const k = 40;
+        var str = "Hello World";
+
+        var j = str + x; 
+        // print(j);  Hello World10 (ประเภท undefined)
+
+        var a = "";     // เป็นสตริงว่าง
+        var b = null;   // เป็นค่า null ไม่มีค่า
+        var c = undefined; // เป็นค่า ค่าหนึ่ง
+
+        if(a ==""){
+            print("Hello World"); // ถูกปริ้น
+        }
+
+        if(a ==" "){
+            print("Hello World");  // ไม่ถูกปริ้น
+        }
+
+        if(b ==0){
+            print("Hello World"); // ไม่ถูกปริ้น เพราะ b เป็น null
+        }
+
+        if(b == null){
+            print("Hello World"); // ถูกปริ้น เพราะ b เป็น null
+        }
+
+        if(c == "go"+3){
+            print("Hello World"); // ถูกปริ้น
+        }
+
+
+        function one() {
+            let y = 20;     // ใช้ได้เฉพาะในฟังก์ชัน one (แบบ 2)
+            const h = 50;   // ตัวแปรคงที่เปลี่ยนไม่ได้ ใช้ได้เฉพาะในฟังก์ชัน one (แบบ 3)
+            h = 500;
+            // print(x); ---1
+            x = 100;
+            // print(y); ---3 ปริ้นได้เฉพาะในฟังก์ชัน one
+        }
+        function two() {
+            let y = 30; // ใช้ได้เฉพาะในฟังก์ชัน two
+            k = 400; // ไม่สามารถเปลี่ยนค่า k ได้ เพราะเป็น const (แบบ 3)
+            // print(x); ---2
+            // print(y); ---4
+        }
+        one();
+        two();
+        
+    </script>
+    <!-- แบบ internal -->
+
+</body>
+</html>
