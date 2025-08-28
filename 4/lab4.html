@@ -18,8 +18,24 @@
     function loadData(){
         //console.log("my loadData");
         $.ajax({
-            type:"", // GET ,POST, PUT, DELETE
-            ur:"https://rmuti-webp.xcool-win741-rock.co/_webservice/getCustomersList.php",
+            type:"GET", // GET ,POST, PUT, DELETE
+            url:"https://rmuti-webp.xcool-win741-rock.co/_webservice/getCustomersList.php",
+            async:true, // true(ดีฟอลต์) , false
+            data:JSON.stringify(null), // ข้อมูลที่จะส่งไป
+            success:function(response){
+                console.log("load data success")
+                //console.log(response)
+                let status = response.status
+                let datalist = response.datalist
+                console.log(status)
+                console.log(datalist)
+                datalist.forEach(function(item, index){
+                    console.log(item.cus_name)
+                })
+            },
+            error:function(error){
+                console.log("load data error");
+            },
         })
     } // แบบ javascript ต้องใช้ onload บน body
 
